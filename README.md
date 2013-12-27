@@ -1,4 +1,4 @@
-Transparent is c++ reflection mechanism.
+Transparent is c++ reflection mechanism
 ===
 Usage:
 
