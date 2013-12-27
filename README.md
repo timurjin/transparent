@@ -27,7 +27,7 @@ The output will be:
 ```
 
 ---
-Transparent could be used to access deep object instances in path like manner:
+Transparent could be used to access nested objects in path-like manner:
 
 ```
         test::DemoClass demo;
@@ -41,16 +41,16 @@ Transparent could be used to access deep object instances in path like manner:
 
 
 ---
-The functionality of library itself build on a Visitor pattern. So any extension could by written as a Visitor which solves desired tasks. 
+The functionality of library built on a Visitor pattern. So any extension can by written as a Visitor which solves desired tasks. 
 
 ```
-// Let's write to any int field 42 or 24 to field with name "foo"
+// Let's write value 42 to any integer field, or value 24 to integer field with name "foo"
 struct write_42_or_24_visitor
 {
 	template<typename T>
 	void container_start(T& a, const char* name) const
 	{
-		// Will be called at any container start.
+		// Will be called before first container element
 		
 	}
 
@@ -103,7 +103,7 @@ struct write_42_or_24_visitor
 ```
 ---
 
-Transparent is based on a full serializable class definintion via Transparent DSL but not on a serializable fields demarcation.
+Transparent is based on a full serializable class definintion via Transparent DSL but not on a serializable fields demarcation. Thus, target code, will have less duplicates what probably will increase it's readability.
 
 ```
 T_CLASS_B(some_message)
