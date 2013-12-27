@@ -41,7 +41,7 @@ Transparent could be used to access nested objects in path-like manner:
 
 
 ---
-The functionality of library built on a Visitor pattern. So any extension can by written as a Visitor which solves desired tasks. 
+The functionality of library built on a Visitor pattern. So any extension (for example sql or xml generation) can by written as a Visitor which solves desired tasks. 
 
 ```
 // Let's write value 42 to any integer field, or value 24 to integer field with name "foo"
