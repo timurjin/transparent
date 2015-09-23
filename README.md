@@ -34,7 +34,7 @@ Transparent could be used to access nested objects in path-like manner:
 	demo.inserted_elt().inserted_elt().long_value();                              // Compile time read access
 	(path(demo) / "inserted_elt" / "inserted_elt" / "long_value").value<long>();  // Runtime read access analogue
 	
-	 path(demo) / "inserted_elt" / "inserted_elt" / "long_value" = 42;            // Runtime object write
+	path(demo) / "inserted_elt" / "inserted_elt" / "long_value" = 42;            // Runtime object write
 	demo.inserted_elt().inserted_elt().long_value(42);                            // Compile time object write
 ```	
 	
